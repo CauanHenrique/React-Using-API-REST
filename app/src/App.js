@@ -31,13 +31,13 @@ function Post() {
       <div className="sidenav">
         <Menu/>
       </div>
-      <div className='main campo-texto Form' style={{flexFlow: 'column', alignItems: 'center'}} >
+      {/* <div className='main campo-texto Form' style={{flexFlow: 'column', alignItems: 'center'}} >
         <h1 style={{display: 'flex'}}>DashBoard</h1>
         <form style={{marginTop: 95}}>
           
           <h1>{count} Produtos</h1>
         </form>
-      </div>
+      </div> */}
     </section>
 
   );

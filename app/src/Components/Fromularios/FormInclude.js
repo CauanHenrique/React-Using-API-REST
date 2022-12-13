@@ -66,16 +66,7 @@ export const FormInclude = () => {
 
             <form onSubmit={handleSubmit} className="campo-texto" style={{marginTop: 95}}>
 
-                <h2>Preencha os dados inserir um produto</h2>
-                <label>Id</label>
-                <input 
-                    className='campo-texto'
-                    name='id'
-                    type="number" 
-                    placeholder="código do produto "
-                    value={id}
-                    onChange={(e) => setid(e.target.value)}
-                    />
+                <h2>Preencha os dados para inserir um produto</h2>
                 <label>Nome</label>
                 <input
                     className='campo-texto'

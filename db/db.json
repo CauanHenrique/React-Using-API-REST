@@ -1,11 +1,28 @@
 {
   "produtos": [
     {
-      "nome": "Ca",
-      "descricao": "sa",
-      "preco": 43,
+      "nome": "altdnvv",
+      "descricao": "sdadf",
+      "preco": "456",
       "categoria_id": 1,
       "id": 1
+    },
+    {
+      "nome": "Cai",
+      "descricao": "fk",
+      "preco": "75",
+      "categoria_id": 1,
+      "id": 2
+    },
+    {
+      "id": 3
+    },
+    {
+      "nome": "cas",
+      "descricao": "lk",
+      "preco": "89",
+      "categoria_id": 1,
+      "id": 4
     }
   ],
   "categorias": [
