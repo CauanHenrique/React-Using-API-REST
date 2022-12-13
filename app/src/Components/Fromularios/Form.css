@@ -1,0 +1,31 @@
+.Form {
+    display: flex;
+    justify-content: center;
+    margin: 0px 10px;
+
+}
+
+
+.Form form{
+    max-width: 30%;
+    background-color: #23212176;
+    border-radius: 20px;
+    padding: 36px 64px;
+    box-shadow: 8px 8px 16px rgba(0,0,0,0.08)
+}
+
+.Form select{
+    background-color: rgb(99, 99, 99);
+    box-shadow: 10px 10px 30px rgba(0,0,0,0.06);
+    width: 50%;
+    border: none;
+    font-size: medium;
+    padding: 10px;
+    box-sizing: border-box;
+}
+.Form button {
+    font-size:medium;
+    width: 130px;
+    height: 30px;
+    justify-content: flex-end;
+}

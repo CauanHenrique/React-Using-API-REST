@@ -1,0 +1,29 @@
+.campo-texto{
+    margin-top: 0px;
+    margin-bottom: 30px;
+}
+
+.campo-texto label {
+    display: block;
+    margin-bottom: 8px;
+    font-size: 24px; 
+}
+
+.campo-texto input{
+    background-color: rgb(100, 131, 147);
+    box-shadow: 10px 20px 40px rgba(0,0,0,0.06);
+    width: 100%;
+    border: none;
+    font-size: 24px;
+    padding: 10px;
+    box-sizing: border-box;
+}
+
+h2{
+    justify-content: center;
+}
+
+.campo-texto select{
+    background-color: rgb(100, 131, 147);
+    box-shadow: 10px 20px 40px rgba(0,0,0,0.06);
+}

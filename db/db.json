@@ -1,0 +1,21 @@
+{
+  "produtos": [
+    {
+      "nome": "Ca",
+      "descricao": "sa",
+      "preco": 43,
+      "categoria_id": 1,
+      "id": 1
+    }
+  ],
+  "categorias": [
+    {
+      "id": 1,
+      "nome": "Hambúrgueres"
+    },
+    {
+      "id": 2,
+      "nome": "Refrigerantes"
+    }
+  ]
+}
