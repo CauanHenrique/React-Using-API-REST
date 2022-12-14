@@ -24,10 +24,13 @@ export const Listing = () => {
         <section className='Form' >
             {produtos.map(produtos => (
                 <form>
+                    <h3>Id:</h3> 
                     {produtos.id}
                     <br></br>
+                    <h3>Nome:</h3> 
                     {produtos.nome}
                     <br></br>
+                    <h3>Preço:</h3> 
                     {produtos.preco}
                 </form>
             ))}            

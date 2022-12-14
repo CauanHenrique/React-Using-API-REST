@@ -21,37 +21,34 @@ export const FormInclude = () => {
         .catch((err) => console.log(err)).catch((err) => console.log(err))
     }, [])
 
-    const [id, setid] = useState("");
     const [nome, setNome] = useState("");
     const [descricao, setDescricao] = useState("");
-    const [preco, setPreco] = useState(43);
-    const [categoria_id, setCategorias_id] = useState(1);
+    const [preco, setPreco] = useState("");
+    const [categoria_id, setCategorias_id] = useState("");
     const [message, setMessage] = useState("");
 
     let handleSubmit =  async (e) =>{
         e.preventDefault();
-        let data = JSON.stringify({
-            nome: nome,
-            descricao: descricao,
-            preco: preco,
-            categoria_id: categoria_id
-        });
-        console.log(data);
         try{
             let res = await fetch("http://localhost:3001/produtos/", {
                 method: "POST",
                 headers: {
                     "Content-Type": "application/json"
                 },
-                body: data
+                body: JSON.stringify({
+                    nome: nome,
+                    descricao: descricao,
+                    preco: preco,
+                    categoria_id: categoria_id
+                }),
+                
             });
             let resJson = await res.json();
                 
                 if (res.status === 200) {
-                  setid(null);  
                   setNome("");
                   setDescricao("");
-                  setPreco(null);
+                  setPreco("");
                   setMessage("Produto cadastrado com sucesso!!");
                 } else {
                   setMessage("Ocorreu algum erro.");
@@ -97,12 +94,11 @@ export const FormInclude = () => {
                     onChange={(e) => setPreco(e.target.value)}
                     />
 
-                <select name="categoria_id" className="campo-texto">
+                <select name="categoria_id" className="campo-texto" onChange={(e) => { setCategorias_id(e.target.value);console.log(e.target.key)}} >
                     <option key={0}>Selecione a categoria.</option>
                     {categorias.map((categorias) =>(
                         <option 
-                            value={categoria_id} 
-                            onChange={(e) => setCategorias_id(e.target.key)} 
+                            value={parseInt(categorias.id)} 
                             key={categorias.id}
                             >
                             {categorias.nome}
@@ -111,7 +107,7 @@ export const FormInclude = () => {
                 </select>
 
                 <br></br>
-                <div className="buttoon">
+                <div>
                     <button type="submit">Enviar</button>
                 </div>
 

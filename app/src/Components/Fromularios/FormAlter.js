@@ -53,7 +53,7 @@ export const FormAlter = () => {
                   setNome("");
                   setDescricao("");
                   setPreco(null);
-                  setMessage("Produto cadastrado com sucesso!!");
+                  setMessage("Produto alterado com sucesso!!");
                 } else {
                   setMessage("Ocorreu algum erro.");
                 }

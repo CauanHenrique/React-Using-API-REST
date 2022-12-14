@@ -3,32 +3,38 @@ import { Post } from '../../../src/index';
 import { PagAlter } from '../../Pages/Alter';
 import { PagInclude } from '../../Pages/Include';
 import { PagList } from '../../Pages/Listing';
+import { FormDelete } from '../../Pages/PagDelete';
 import './Menu.css';
 
 export const Menu = () => {
 
-
     return (
-        <Router className='sidenav'>
-            <div>
-                <Link to='/'>Home</Link>
-            </div>
-            <div>
-                <a href='http://localhost:3000/Include'>Incluir</a>
-            </div>
-            <div>
-                <Link to='/Alter'>Alterar</Link>
-            </div>
-            <div>
-                <Link to='/List'>Listar</Link>
-            </div>
+        <div className="content" style={{}}>
+        <Router >
+            <section id='nav' >
+                <div>
+                    <Link className='li' to='/'>Home</Link>
+                </div>
+                <div>
+                    <Link className='li' to='/Include'>Incluir</Link>
+                </div>
+                <div>
+                    <Link to='/Alter' className='li' style={{textDecoration: 'none'}}>Alterar</Link>
+                </div>
+                <div>
+                    <Link className='li' to='/List'>Listar</Link>
+                </div>
+                <div>
+                    <Link className='li' to='/Delete'>Deletar</Link>
+                </div>
+            </section>
             <Routes>
-                {/* <Route exact path="/" element={<Post />} />; */}
                 <Route path="/Include" element={<PagInclude />} />
                 <Route path='/Alter' element={<PagAlter />} />
                 <Route path='/List' element={<PagList />} />
+                <Route path='/Delete' element={<FormDelete />} />
             </Routes>
         </Router>
-        
+        </div>
     )
 }

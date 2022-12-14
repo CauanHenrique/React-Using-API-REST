@@ -5,7 +5,6 @@ export const PagList = () => {
     return (
       <div>
         <section>
-          {/* <Menu /> */}
           <Listing />
         </section>
       </div>

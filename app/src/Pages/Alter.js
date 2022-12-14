@@ -6,7 +6,6 @@ export const PagAlter = () => {
     return (
       <div>
         <section>
-            {/* <Menu /> */}
             <FormAlter   />
         </section>
       </div>
