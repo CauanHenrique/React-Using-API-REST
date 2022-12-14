@@ -30,7 +30,6 @@ export const FormDelete = () => {
         let data = JSON.stringify({
             id: id
         });
-        console.log(id);
         try{
             let res = await fetch(`http://localhost:3001/produtos/${id}`, {
                 method: "DELETE",
@@ -42,7 +41,7 @@ export const FormDelete = () => {
             let resJson = await res.json();
                 
                 if (res.status === 200) {
-                  setid(null);
+                  setid("");
                   setMessage("Produto removido com sucesso!!");
                 } else {
                   setMessage("Ocorreu algum erro.");
@@ -53,9 +52,9 @@ export const FormDelete = () => {
     }
 
     return (
-        <section className="Form">
-
-            <form onSubmit={handleSubmit} className="campo-texto" style={{marginTop: 95}}>
+        <section className="main dashboard campo-texto Form">
+            <h1>Deletar</h1>
+            <form onSubmit={handleSubmit} className="campo-texto" style={{marginTop: 60}}>
 
                 <h2>Preencha a id para deletar um produto</h2>
                 <label>Id</label>

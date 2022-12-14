@@ -1,20 +1,6 @@
 {
   "produtos": [
     {
-      "id": 1,
-      "nome": "Alt",
-      "descricao": "sad",
-      "preco": "45",
-      "categoria_id": 1
-    },
-    {
-      "id": 2,
-      "nome": "X-Búrguer",
-      "descricao": "Pão, bife de hambúrguer 90g, 1 fatia de queijo, salada e batata.",
-      "preco": 10.5,
-      "categoria_id": 1
-    },
-    {
       "id": 3,
       "nome": "X-Bacon",
       "descricao": "Pão, bife de hambúrguer 90g, 1 fatia de queijo, 2 fatia de bacon, salada e batata.",
@@ -41,6 +27,13 @@
       "preco": "5",
       "categoria_id": "2",
       "id": 8
+    },
+    {
+      "nome": "volta",
+      "descricao": "a",
+      "preco": "3",
+      "categoria_id": "2",
+      "id": 9
     }
   ],
   "categorias": [

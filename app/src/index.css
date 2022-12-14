@@ -9,8 +9,6 @@ html, body{
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   background-image: linear-gradient(to top, rgb(46, 84, 98), rgb(87, 147, 169));
-  /* background-size: cover !important;
-  background-position: center; */
 }
 div {
   color: white;

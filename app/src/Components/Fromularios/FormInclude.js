@@ -45,10 +45,11 @@ export const FormInclude = () => {
             });
             let resJson = await res.json();
                 
-                if (res.status === 200) {
+                if (res.status === 201) {
                   setNome("");
                   setDescricao("");
                   setPreco("");
+                  setCategorias_id(0)
                   setMessage("Produto cadastrado com sucesso!!");
                 } else {
                   setMessage("Ocorreu algum erro.");
@@ -59,9 +60,9 @@ export const FormInclude = () => {
     }
 
     return (
-        <section className="Form">
-
-            <form onSubmit={handleSubmit} className="campo-texto" style={{marginTop: 95}}>
+        <section className="Form dashboard">
+            <h1>Incluir</h1>
+            <form onSubmit={handleSubmit} className="campo-texto" style={{marginTop: 60}}>
 
                 <h2>Preencha os dados para inserir um produto</h2>
                 <label>Nome</label>
@@ -94,7 +95,7 @@ export const FormInclude = () => {
                     onChange={(e) => setPreco(e.target.value)}
                     />
 
-                <select name="categoria_id" className="campo-texto" onChange={(e) => { setCategorias_id(e.target.value);console.log(e.target.key)}} >
+                <select name="categoria_id" className="campo-texto" onChange={(e) => setCategorias_id(e.target.value)} >
                     <option key={0}>Selecione a categoria.</option>
                     {categorias.map((categorias) =>(
                         <option 

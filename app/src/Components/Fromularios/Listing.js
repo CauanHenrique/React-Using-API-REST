@@ -1,4 +1,5 @@
 import {useEffect, useState} from 'react'
+import { Grid } from '@mui/material';
 
 import '../Fromularios/Form.css'
 
@@ -21,19 +22,20 @@ export const Listing = () => {
     
 
     return (
-        <section className='Form' >
-            {produtos.map(produtos => (
-                <form>
-                    <h3>Id:</h3> 
-                    {produtos.id}
-                    <br></br>
-                    <h3>Nome:</h3> 
-                    {produtos.nome}
-                    <br></br>
-                    <h3>Preço:</h3> 
-                    {produtos.preco}
-                </form>
-            ))}            
+        <section className='dashboard'>
+            <h1>Listar</h1>
+                {produtos.map(produtos => (
+                    <div id='card'>
+                        <h3>Id:</h3> 
+                        {produtos.id}
+                        <br></br>
+                        <h3>Nome:</h3> 
+                        {produtos.nome}
+                        <br></br>
+                        <h3>Preço:</h3> 
+                        {produtos.preco}
+                    </div>
+                ))}                      
         </section> 
     )
     

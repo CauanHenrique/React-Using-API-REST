@@ -24,8 +24,8 @@ export const FormAlter = () => {
     const [id, setid] = useState("");
     const [nome, setNome] = useState("");
     const [descricao, setDescricao] = useState("");
-    const [preco, setPreco] = useState(43);
-    const [categoria_id, setCategorias_id] = useState(1);
+    const [preco, setPreco] = useState("");
+    const [categoria_id, setCategorias_id] = useState("");
     const [message, setMessage] = useState("");
 
     let handleSubmit =  async (e) =>{
@@ -37,7 +37,6 @@ export const FormAlter = () => {
             preco: preco,
             categoria_id: categoria_id
         });
-        console.log(id);
         try{
             let res = await fetch(`http://localhost:3001/produtos/${id}`, {
                 method: "PATCH",
@@ -49,10 +48,10 @@ export const FormAlter = () => {
             let resJson = await res.json();
                 
                 if (res.status === 200) {
-                  setid(null);  
+                  setid("");  
                   setNome("");
                   setDescricao("");
-                  setPreco(null);
+                  setPreco("");
                   setMessage("Produto alterado com sucesso!!");
                 } else {
                   setMessage("Ocorreu algum erro.");
@@ -63,9 +62,9 @@ export const FormAlter = () => {
     }
 
     return (
-        <section className="Form">
-
-            <form onSubmit={handleSubmit} className="campo-texto" style={{marginTop: 95}}>
+        <section className="Form dashboard">
+            <h1>Alterar</h1>
+            <form onSubmit={handleSubmit} className="campo-texto" style={{marginTop: 60}}>
 
                 <h2>Preencha os dados para alterar um produto</h2>
                 <label>Id</label>
@@ -107,12 +106,11 @@ export const FormAlter = () => {
                     onChange={(e) => setPreco(e.target.value)}
                     />
 
-                <select name="categoria_id" className="campo-texto">
+                <select name="categoria_id" className="campo-texto" onChange={(e) => setCategorias_id(e.target.value)}>
                     <option key={0}>Selecione a categoria.</option>
                     {categorias.map((categorias) =>(
                         <option 
-                            value={categoria_id} 
-                            onChange={(e) => setCategorias_id(e.target.key)} 
+                            value={parseInt(categorias.id)}  
                             key={categorias.id}
                             >
                             {categorias.nome}

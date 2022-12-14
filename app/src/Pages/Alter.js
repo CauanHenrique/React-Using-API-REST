@@ -4,10 +4,10 @@ import { FormAlter } from "../Components/Fromularios/FormAlter";
 
 export const PagAlter = () => {
     return (
-      <div>
-        <section>
+      <section  >
+        <div className='main campo-texto Form' >
             <FormAlter   />
-        </section>
-      </div>
+        </div>
+      </section>
     );
   }

@@ -3,10 +3,10 @@ import { Listing } from "../Components/Fromularios/Listing";
 
 export const PagList = () => {
     return (
-      <div>
-        <section>
+      <section  >
+        <div className='campo-texto Form' style={{paddingTop: 95}} >
           <Listing />
-        </section>
-      </div>
+        </div>
+      </section>
     );
   }

@@ -4,6 +4,7 @@ import { PagAlter } from '../../Pages/Alter';
 import { PagInclude } from '../../Pages/Include';
 import { PagList } from '../../Pages/Listing';
 import { FormDelete } from '../../Pages/PagDelete';
+import PagDash from '../../Pages/PgDash';
 import './Menu.css';
 
 export const Menu = () => {
@@ -13,7 +14,7 @@ export const Menu = () => {
         <Router >
             <section id='nav' >
                 <div>
-                    <Link className='li' to='/'>Home</Link>
+                    <Link className='li' to='/'>DashBoard</Link>
                 </div>
                 <div>
                     <Link className='li' to='/Include'>Incluir</Link>
@@ -29,7 +30,8 @@ export const Menu = () => {
                 </div>
             </section>
             <Routes>
-                <Route path="/Include" element={<PagInclude />} />
+                <Route path='/' exact element={<PagDash />} />
+                <Route path='/Include' element={<PagInclude />} />
                 <Route path='/Alter' element={<PagAlter />} />
                 <Route path='/List' element={<PagList />} />
                 <Route path='/Delete' element={<FormDelete />} />
